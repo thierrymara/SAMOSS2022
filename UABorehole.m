@@ -17,7 +17,7 @@ PDF.Coeff=[0.10,0.016,0.0;7.71,1,0.0;63070,100000,115600;6.95,0.0167,0.0;63,116,
 PDF.Type={'Normal';'LogNormal';'Triangular';'LogNormal';'Uniform';'LogNormal';'Uniform';'Uniform'};
 
 Nsample=1000;%Sample size
-U = rand(Nsample,d)
+U = rand(Nsample,d);
 
 %Transformation
 X(:,1)=sqrt(2)*erfinv(2*U(:,1)-1)*PDF.Coeff(1,2)+PDF.Coeff(1,1);%Normal
